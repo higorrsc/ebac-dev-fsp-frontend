@@ -1,1 +1,1 @@
-# curso_ebac_frontend
+# Exercício de Java Script
