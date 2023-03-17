@@ -5,6 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
   </head>
-  <body></body>
+  <body>
+    <header><h1>Cadastro</h1></header>
+    <div class="container">
+      <form>
+        <div class="formField">
+          <label for="fullName">Nome Completo</label>
+          <input type="text" name="fullName" id="fullName" />
+        </div>
+        <div class="formField">
+          <label for="email">E-Mail</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="formField">
+          <label for="telefone">Telefone</label>
+          <input type="tel" name="telefone" id="telefone" />
+        </div>
+        <div class="formField">
+          <label for="cpf">CPF</label>
+          <input type="text" name="cpf" id="cpf" />
+        </div>
+        <div class="formField">
+          <label for="fullAddress">Endereço Completo</label>
+          <input type="text" name="fullAddress" id="fullAddress" />
+        </div>
+        <div class="formField">
+          <label for="cep">CEP</label>
+          <input type="text" name="cep" id="cep" />
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
