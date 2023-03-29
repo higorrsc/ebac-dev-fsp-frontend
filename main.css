@@ -1,6 +1,7 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+
 .navbar {
   background-color: #e15f41;
 }
@@ -16,10 +17,18 @@ body {
   color: #fff;
 }
 
-.navbar-brand {
+.navbar-toggler {
+  background-color: #ffeae6;
+}
+
+.section-title {
   font-family: "Pacifico", cursive;
 }
 
-.navbar-toggler {
+.section-title span {
+  color: #e15f41;
+}
+
+#sobre-o-restaurante {
   background-color: #ffeae6;
 }
