@@ -1,5 +1,6 @@
+.parcel-cache
 .vscode
 build
-node_modules
 dev
 dist
+node_modules
