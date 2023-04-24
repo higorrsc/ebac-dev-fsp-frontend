@@ -48,10 +48,17 @@ $(document).ready(function () {
         const estado = json.uf;
         const endereco = `${logradouro}, ${bairro} - ${cidade} - ${estado}`;
         $("#endereco").val(endereco);
+      })
+      .catch(function (erro) {
+        alert(
+          "Ocorreu um erro ao buscar o endereço, tente novamente mais tarde."
+        );
+      })
+      .finally(function () {
         setTimeout(function () {
           $(botao).find("i").removeClass("d-none");
           $(botao).find("span").addClass("d-none");
-        }, 4000);
+        }, 1000);
       });
   });
 });
