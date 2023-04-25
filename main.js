@@ -46,12 +46,30 @@ const pessoa = {
   conhecimentos: conhecimentos,
 };
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof ehMaiorDeIdade);
-console.log(typeof conhecimentos);
-console.log(typeof pessoa);
-console.log(typeof carroDaMaria2);
+function exibeAtributo(nomeAtributo) {
+  console.log(pessoa[nomeAtributo]);
+}
 
-console.log(carroDaMaria2 instanceof Carro);
-console.log(conhecimentos instanceof Carro);
+exibeAtributo("nome");
+
+pessoa.sobrenome = "souza";
+pessoa["sobrenome"] = undefined;
+
+Object.freeze(pessoa);
+
+pessoa.nome = "joao";
+
+if (pessoa["sobrenome"]) {
+  console.log("a pessoa tem um sobrenome");
+}
+
+if ("sobrenome" in pessoa) {
+  console.log("tem um sobrenome");
+}
+
+console.log(pessoa.nome);
+console.log(pessoa["nome"]);
+
+console.log(Object.keys(pessoa).length);
+console.log(Object.keys(pessoa));
+console.log(Object.values(pessoa));
