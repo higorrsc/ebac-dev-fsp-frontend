@@ -1,4 +1,4 @@
-// gerar número interio aleatoriamente
+// gerar número interio aleatoriamente para a nota
 function notaAleatoria(minimo, maximo) {
   return Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
 }
@@ -6,7 +6,7 @@ function notaAleatoria(minimo, maximo) {
 // array com os nomes dos alunos
 const nomes = ["John Snow", "Daenerys Targaryen", "Khal Drogo", "Ygritte"];
 
-// gerar a nota aleatoriamente
+// array com as notas aleatorias
 const notas = [
   notaAleatoria(0, 10),
   notaAleatoria(0, 10),
