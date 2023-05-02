@@ -1,47 +1,26 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+  const nome ='Higor Cruz'
+  const meuObjeto = {
+    nome: 'Higor',
+    filmeFavorito: 'Avatar'
+  }
+
+  function dizOla(nome){
+    return `${nome} diz oi!`
+  }
+
+  const enderecoDaImagemDoBatman = 'https://cdn.pixabay.com/photo/2021/02/04/18/40/batman-5982258_1280.png'
+  const botaoEstaDesabilitado = false
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <h1>{{ nome }}</h1>
+  <h2>{{ meuObjeto.filmeFavorito }}</h2>
+  <h2>{{ dizOla('Thaís') }}</h2>
+  <img :src="enderecoDaImagemDoBatman" alt="Batman">
+  <button :disabled="botaoEstaDesabilitado">Enviar Mensagem</button>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
