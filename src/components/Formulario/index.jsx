@@ -1,14 +1,29 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Formulario = () => {
-    let [materiaA, setMateriaA] = useState(0);
-    let [materiaB, setMateriaB] = useState(0);
-    let [materiaC, setMateriaC] = useState(0);
-    let [nome, setNome] = useState('');
+    const [materiaA, setMateriaA] = useState(0);
+    const [materiaB, setMateriaB] = useState(0);
+    const [materiaC, setMateriaC] = useState(0);
+    const [nome, setNome] = useState('');
+
+    useEffect(() => {
+        console.log('O componente iniciou')
+
+        return () => {
+            console.log('O component finalizou')
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log('O estado nome mudou')
+    }, [nome]);
+
+    useEffect(() => {
+        console.log('materiaA mudou para: ' + materiaA)
+    }, [materiaA, materiaB, materiaC]);
 
     const alteraNome = (evento) => {
         setNome(estadoAnterior => {
-            console.log(estadoAnterior);
             return evento.target.value;
         })
     }
@@ -31,9 +46,9 @@ const Formulario = () => {
     return(
         <form action="">
             <input type="text" name="" id="" placeholder="Seu Nome" onChange={alteraNome} />
-            <input type="number" placeholder="Nota matéria A" onChange={({ target }) => setMateriaA(parseInt(target.value))}/>
-            <input type="number" placeholder="Nota matéria B" onChange={evento => setMateriaB(parseInt(evento.target.value))}/>
-            <input type="number" placeholder="Nota matéria C" onChange={evento => setMateriaC(parseInt(evento.target.value))}/>            
+            <input type="number" placeholder="Nota matéria A" min={0} max={10} onChange={({ target }) => setMateriaA(parseInt(target.value))}/>
+            <input type="number" placeholder="Nota matéria B" min={0} max={10} onChange={evento => setMateriaB(parseInt(evento.target.value))}/>
+            <input type="number" placeholder="Nota matéria C" min={0} max={10} onChange={evento => setMateriaC(parseInt(evento.target.value))}/>            
             {renderizaResultado()}
         </form>
     )
