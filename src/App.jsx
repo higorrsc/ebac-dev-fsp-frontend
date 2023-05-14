@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Perfil from "./components/Perfil";
 import Formulario from "./components/Formulario";
+import ReposList from "./components/ReposList";
 
 function App() {
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
@@ -9,10 +10,11 @@ function App() {
   return (
     <>
       <Perfil nome='Higor Cruz' endereco='https://github.com/higorrsc.png'/>      
-      {formularioEstaVisivel && (
+      <ReposList />
+      {/* {formularioEstaVisivel && (
         <Formulario />
       )}
-      <button type="button" onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)}>toggle form</button>
+      <button type="button" onClick={() => setFormularioEstaVisivel(!formularioEstaVisivel)}>toggle form</button> */}
     </>
   )
 }

@@ -45,6 +45,11 @@ const Formulario = () => {
 
     return(
         <form action="">
+            <ul>
+                {[1, 2, 3, 4, 5].map(item => (
+                    <li key={item}>{item}</li>
+                ))}
+            </ul>
             <input type="text" name="" id="" placeholder="Seu Nome" onChange={alteraNome} />
             <input type="number" placeholder="Nota matéria A" min={0} max={10} onChange={({ target }) => setMateriaA(parseInt(target.value))}/>
             <input type="number" placeholder="Nota matéria B" min={0} max={10} onChange={evento => setMateriaB(parseInt(evento.target.value))}/>
